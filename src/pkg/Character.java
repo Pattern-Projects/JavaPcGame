@@ -1,5 +1,5 @@
 package pkg;
-
+//test
 public abstract class Character {
 	public String name;
 	private int level;
