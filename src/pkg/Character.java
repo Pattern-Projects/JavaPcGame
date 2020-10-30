@@ -1,6 +1,4 @@
 package pkg;
-//test
-//dawfawf testasfas asf
 public abstract class Character {
 	public String name;
 	private int level;
