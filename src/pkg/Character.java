@@ -1,6 +1,7 @@
 package pkg;
 public abstract class Character {
 	//ADHFAJFH
+	//paul
 	public String name;
 	private int level;
 	private	float health;
