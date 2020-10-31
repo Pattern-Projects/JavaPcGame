@@ -8,7 +8,7 @@ public abstract class Character {
 	private float damage;
 	private float armor;
 	
-	Character(String name, int level, float health, float damage, float armor){
+	public Character(String name, int level, float health, float damage, float armor){
 		this.name = name;
 		this.level = level;
 		this.health = health;
