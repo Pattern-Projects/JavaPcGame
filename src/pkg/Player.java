@@ -18,6 +18,7 @@ public class Player extends Character{
 	//Singleton END
 	
 	String story;
+	private int money;
 	
 	
 	private Player(String name, String story) {
@@ -33,6 +34,10 @@ public class Player extends Character{
 	@Override
 	void die() {
 		System.out.println("You Died!");
+	}
+	
+	public void addMoney(int money) {
+		this.money += money;
 	}
 	
 }
