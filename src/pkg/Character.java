@@ -18,8 +18,12 @@ public abstract class Character {
 	
 	int getLevel() { return level;}
 	float getHealth() { return health;}
-	float getDamange() { return damage;}
+	float getDamage() { return damage;}
 	float getArmor() { return armor;}
+	
+	void addLevel(int level) {
+		this.level += level;
+	}
 	
 	void takeDamage(float damage) {
 		this.health -= damage - damage*armor/(armor+300);
