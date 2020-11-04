@@ -4,44 +4,47 @@ import java.util.Scanner;
 
 public final class GameLogic {
 	
-	public void GameMenu() {
+	public void gameMenu() {
 		System.out.print("Start : 1\nExit : 2\n=> ");
 		int opt = 1;
 		Scanner input = new Scanner(System.in);
 		opt = input.nextInt();
+		
 		switch(opt) {
 		case 1:
-			//game starts
-			break;
+			input.close();
+			return;
+			
 		case 2:
 			System.exit(0);
 		}
 		input.close();
 	}
+	
+	public void characterCreation() {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter your name\n=> ");
+		String name = input.nextLine();
+		
+		System.out.println("Enter your \n=> ");
+		String story = input.nextLine();
+		
+		//Player.initialize("name", "story"); //Initializes Player
+		
+		input.close();
+	}
 
 	public static void main(String[] args) {
 		GameLogic game = new GameLogic();
+		game.gameMenu();
+		game.characterCreation();
 		
-		game.GameMenu();
 		
-		//int opt = 1;
-		//Scanner input = new Scanner(System.in);
-		//opt = input.nextInt();
-		//TODO Gives ERROR
-		
-		//System.out.print("Enter your name\n=> ");
-		////Scanner input = new Scanner(System.in);
-		//String name = input.nextLine();
-		//System.out.print("Enter your name\n=> ");
-		//String story = input.nextLine();
-		
-		Player.initialize("name", "story"); //Initializes Player
 		
 		while(true) {
 			//Game Happens
 			break;
 		}
-
 	}
-
 }
