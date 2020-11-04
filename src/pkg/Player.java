@@ -2,9 +2,25 @@ package pkg;
 
 public class Player extends Character{
 	
+	//Singleton START
+	private static Player single_instance  = null;
+	public static Player initialize(String name, String story) 
+    { 
+        if (single_instance == null) 
+            single_instance = new Player(name, story); 
+  
+        return single_instance; 
+    } 
+	public static Player getInstance() 
+    { 
+        return single_instance; 
+    } 
+	//Singleton END
+	
 	String story;
 	
-	public Player(String name, String story) {
+	
+	private Player(String name, String story) {
 		super(name, 1, 100, 10, 0);
 		this.story = story;
 	}

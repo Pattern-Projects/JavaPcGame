@@ -35,14 +35,13 @@ public final class GameLogic {
 		//System.out.print("Enter your name\n=> ");
 		//String story = input.nextLine();
 		
-		//Player player = new Player(name, story);
+		Player.initialize("name", "story"); //Initializes Player
 		
 		while(true) {
 			//Game Happens
 			break;
 		}
 
-		input.close();
 	}
 
 }
