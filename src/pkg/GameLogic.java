@@ -12,13 +12,13 @@ public final class GameLogic {
 		
 		switch(opt) {
 		case 1:
-			input.close();
 			return;
 			
 		case 2:
+			input.close();
 			System.exit(0);
 		}
-		input.close();
+		
 	}
 	
 	public void characterCreation() {
@@ -27,15 +27,15 @@ public final class GameLogic {
 		System.out.println("Enter your name\n=> ");
 		String name = input.nextLine();
 		
-		System.out.println("Enter your \n=> ");
+		System.out.println("Enter your story\n=> ");
 		String story = input.nextLine();
 		
-		//Player.initialize("name", "story"); //Initializes Player
+		Player.initialize("name", "story"); //Initializes Player
 		
-		input.close();
 	}
 
 	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
 		GameLogic game = new GameLogic();
 		game.gameMenu();
 		game.characterCreation();
@@ -46,5 +46,6 @@ public final class GameLogic {
 			//Game Happens
 			break;
 		}
+		input.close();
 	}
 }
