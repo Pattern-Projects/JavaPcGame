@@ -17,9 +17,11 @@ public class Enemy extends Character {
 	}
 	void attackPlayer() {
 		Player.getInstance().takeDamage(this.getDamage());
+		System.out.println("Enemy " + this.name + " attacked Player with " + this.getDamage() + "Damage");
 	}
 	void attackFriendly(Friendly friendly) {
-		friendly.getDamage(this.getDamage());
+		friendly.takeDamage(this.getDamage());
+		System.out.println("Enemy " + this.name + " attacked " + friendly.name + " with " + this.getDamage() + " Damage");
 	}
 	
 	public Enemy(String name, int level, float health, float damage, float armor, int money) {

@@ -9,12 +9,13 @@ public class Friendly extends Character {
 	
 	@ Override
 	void die () {
-		System.out.println("I feel bad");
+		System.out.println("Mr." + Player.getInstance().name + " I don't feel so good");
+		System.out.println(this.name + " died!");
 		
 	}
 	
 	void healPlayer() {
-		Player.getInstance().getHeal(this.getDamage());
+		Player.getInstance().takeHeal(this.getDamage());
 	
 	}
 
