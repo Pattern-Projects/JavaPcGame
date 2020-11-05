@@ -27,6 +27,9 @@ public abstract class Character {
 	
 	void takeDamage(float damage) {
 		this.health -= damage - damage*armor/(armor+300);
+		
+		if (this.health <= 0)
+			die();
 	}
 	void takeHeal(float damage) {
 		this.health += damage;
@@ -41,8 +44,4 @@ public abstract class Character {
 	//NPC: go without me
 	//Enemy: my brothers will revenge me
 	//Player: GAME ENDS
-	
-	
-	
-	
 }

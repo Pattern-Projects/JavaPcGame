@@ -33,11 +33,15 @@ public class Player extends Character{
 
 	@Override
 	void die() {
-		System.out.println("You Died!");
+		GameLogic.getInstance().lostGame();
 	}
 	
 	public void addMoney(int money) {
 		this.money += money;
+	}
+	
+	void attackEnemy(Enemy enemy) {
+		enemy.takeDamage(this.getDamage());
 	}
 	
 }
