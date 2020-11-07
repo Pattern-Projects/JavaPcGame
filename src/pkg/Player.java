@@ -19,10 +19,23 @@ public class Player extends Character{
 	
 	String story;
 	private int money;
-	
+	private boolean alive;
 	
 	private Player(String name, String story) {
 		super(name, 1, 100, 10, 0);
+		this.story = story;
+		alive = true;
+	}
+	
+	boolean isAlive() {
+		return alive;
+	}
+	
+	void setName(String name) {
+		this.name = name;
+	}
+	
+	void setStory(String story) {
 		this.story = story;
 	}
 	
@@ -34,6 +47,7 @@ public class Player extends Character{
 	@Override
 	void die() {
 		GameLogic.getInstance().lostGame();
+		alive = false;
 	}
 	
 	public void addMoney(int money) {
