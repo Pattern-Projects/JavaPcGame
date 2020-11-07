@@ -96,6 +96,7 @@ public class GameController implements Initializable {
 	
 	public void lostGame() {
 		output("You Died!");
+		System.out.print("Game Over!");
 		System.exit(0);
 	}
 	

@@ -20,10 +20,12 @@ public class Player extends Character{
 	String story;
 	private int money;
 	private boolean alive;
+	GameController controller;
 	
 	private Player(String name, String story, GameController controller) {
 		super(name, 1, 100, 10, 0, controller);
 		this.story = story;
+		this.controller = controller;
 		alive = true;
 	}
 	
@@ -46,7 +48,7 @@ public class Player extends Character{
 
 	@Override
 	void die() {
-		GameLogic.getInstance().lostGame();
+		controller.lostGame();
 		alive = false;
 	}
 	
