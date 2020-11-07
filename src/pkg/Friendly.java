@@ -4,13 +4,13 @@ public class Friendly extends Character {
 
 	@Override
 	void talk() {
-		System.out.println("Let me help");
+		output("Let me help");
 	}
 	
 	@ Override
 	void die () {
-		System.out.println("Mr." + Player.getInstance().name + " I don't feel so good");
-		System.out.println(this.name + " died!");
+		output("Mr." + Player.getInstance().name + " I don't feel so good");
+		output(this.name + " died!");
 		
 	}
 	
@@ -22,13 +22,11 @@ public class Friendly extends Character {
 	void attackEnemy(Enemy enemy) {
 		enemy.takeDamage(this.getDamage());
 	}
-	
-	
-	
-	
-	public Friendly(String name, int level,float health,float damage,float armor ) {
-	super(name,level,health,damage,armor); 
+		
+	public Friendly(String name, int level,float health,float damage,float armor, GameController controller ) {
+	super(name,level,health,damage,armor, controller); 
 	}
+
 }
 	
 	

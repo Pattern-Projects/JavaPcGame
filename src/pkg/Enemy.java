@@ -5,34 +5,33 @@ public class Enemy extends Character {
 	
 	@Override
 	void talk() {
-		System.out.println("I will kill you");
+		output("I will kill you");
 	}
 	
 	@Override
 	void die() {
 		Player.getInstance().addMoney(money);
 		Player.getInstance().addLevel(1);
-		System.out.println("My brothers will revenge me");
-		
+		output("My brothers will revenge me");		
 	}
+
 	void attackPlayer() {
 		Player.getInstance().takeDamage(this.getDamage());
-		System.out.println("Enemy " + this.name + " attacked Player with " + this.getDamage() + "Damage");
+		output("Enemy " + this.name + " attacked Player with " + this.getDamage() + "Damage");
 	}
 	void attackFriendly(Friendly friendly) {
 		friendly.takeDamage(this.getDamage());
-		System.out.println("Enemy " + this.name + " attacked " + friendly.name + " with " + this.getDamage() + " Damage");
+		output("Enemy " + this.name + " attacked " + friendly.name + " with " + this.getDamage() + " Damage");
 	}
 	
-	public Enemy(String name, int level, float health, float damage, float armor, int money) {
-		super(name, level, health, damage, armor);
+	public Enemy(String name, int level, float health, float damage, float armor, int money, GameController controller) {
+		super(name, level, health, damage, armor, controller);
 		this.money=money;
 	}
 	
-	public Enemy(int level, float health, float damage, float armor, int money) {
-		super( "Unnamed", level, health, damage, armor);
+	public Enemy(int level, float health, float damage, float armor, int money, GameController controller) {
+		super( "Unnamed", level, health, damage, armor, controller);
 		this.money=money;		
 	}
 		
-
 }

@@ -4,10 +4,10 @@ public class Player extends Character{
 	
 	//Singleton START
 	private static Player single_instance  = null;
-	public static Player initialize(String name, String story) 
+	public static Player initialize(String name, String story, GameController controller) 
     { 
         if (single_instance == null) 
-            single_instance = new Player(name, story); 
+            single_instance = new Player(name, story, controller); 
   
         return single_instance; 
     } 
@@ -21,8 +21,8 @@ public class Player extends Character{
 	private int money;
 	private boolean alive;
 	
-	private Player(String name, String story) {
-		super(name, 1, 100, 10, 0);
+	private Player(String name, String story, GameController controller) {
+		super(name, 1, 100, 10, 0, controller);
 		this.story = story;
 		alive = true;
 	}
@@ -41,7 +41,7 @@ public class Player extends Character{
 	
 	@Override
 	void talk() {
-		System.out.println(story);
+		output(story);
 	}
 
 	@Override
@@ -57,5 +57,4 @@ public class Player extends Character{
 	void attackEnemy(Enemy enemy) {
 		enemy.takeDamage(this.getDamage());
 	}
-	
 }

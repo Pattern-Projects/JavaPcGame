@@ -16,11 +16,12 @@ import javafx.scene.control.TextField;
  */
 public class GameController implements Initializable {
     
-    private Main application;
+	private Main application;
     private int step = 0;
     private String name;
-	Enemy A = new Enemy(20, 1000, 70, 34, 2346);
-	Friendly B = new Friendly("Lotrak", 3,30,20,0);
+    
+	Enemy A = new Enemy(20, 1000, 70, 34, 2346, this);
+	Friendly B = new Friendly("Lotrak", 3,30,20,0, this);
 	
     @FXML
     private TextArea result;
@@ -46,12 +47,11 @@ public class GameController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    	Player.initialize("Me", "My story"); //Initializes Player
+    	Player.initialize("Me", "My story", this); //Initializes Player
 		output("Enter your name:");
 
     }    
     
-    //TODO: Connect existing project to UI
     private void next(String in) {
     	switch (step) {
     		case 0:

@@ -2,18 +2,20 @@ package pkg;
 public abstract class Character {
 	//ADHFAJFH
 	//paul
+	private GameController controller;
 	public String name;
 	private int level;
 	private	float health;
 	private float damage;
 	private float armor;
 	
-	public Character(String name, int level, float health, float damage, float armor){
+	public Character(String name, int level, float health, float damage, float armor, GameController controller){
 		this.name = name;
 		this.level = level;
 		this.health = health;
 		this.damage = damage;
 		this.armor = armor;
+		this.controller = controller;
 	}
 	
 	int getLevel() { return level;}
@@ -44,4 +46,14 @@ public abstract class Character {
 	//NPC: go without me
 	//Enemy: my brothers will revenge me
 	//Player: GAME ENDS
+
+	void setController(GameController controller) {
+		this.controller = controller;
+	}
+	
+	void output(String output) {
+		if (controller!=null) {
+			controller.output(output);
+		}
+	}
 }

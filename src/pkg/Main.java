@@ -20,7 +20,8 @@ import pkg.constants.GlobalConstants;
  */
 public class Main extends Application {
     private Stage stage;
-
+    GameController game;
+    
     @Override
     public void start(Stage stage) throws Exception {
         this.stage = stage;
@@ -53,7 +54,7 @@ public class Main extends Application {
     
     void game() {
         try {
-            GameController game = (GameController) replaceSceneContent("Game.fxml");
+            game = (GameController) replaceSceneContent("Game.fxml");
             game.setApp(this);
 //            stage.setFullScreen(true);
         } catch (Exception ex) {
