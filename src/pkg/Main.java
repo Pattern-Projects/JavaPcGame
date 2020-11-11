@@ -27,7 +27,7 @@ public class Main extends Application {
         this.stage = stage;
         stage.setTitle(GlobalConstants.GAME_NAME);
         //Initialize Scene
-        Parent root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("views/Menu.fxml"));
         Scene scene = new Scene(root);
 
         //Set Scene
@@ -45,7 +45,7 @@ public class Main extends Application {
     
     void menu() {
         try {
-            MenuController menu = (MenuController) replaceSceneContent("Menu.fxml");
+            MenuController menu = (MenuController) replaceSceneContent("views/Menu.fxml");
             menu.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -54,7 +54,7 @@ public class Main extends Application {
     
     void game() {
         try {
-            game = (GameController) replaceSceneContent("Game.fxml");
+            game = (GameController) replaceSceneContent("views/Game.fxml");
             game.setApp(this);
 //            stage.setFullScreen(true);
         } catch (Exception ex) {
