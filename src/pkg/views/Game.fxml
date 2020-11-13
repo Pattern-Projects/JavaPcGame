@@ -10,11 +10,11 @@
 
 <AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkg.GameController">
     <children>
-      <VBox id="VBox" alignment="CENTER" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox id="VBox" alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="320.0" spacing="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ScrollPane focusTraversable="false" prefHeight="200.0" prefWidth="200.0">
+            <ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                <content>
-                  <TextArea id="result" fx:id="result" editable="false" focusTraversable="false" maxHeight="1.7976931348623157E308" prefHeight="146.0" prefWidth="318.0">
+                  <TextArea id="result" fx:id="result" editable="false" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="146.0" prefWidth="318.0">
                      <cursor>
                         <Cursor fx:constant="NONE" />
                      </cursor>
@@ -22,7 +22,7 @@
                </content>
             </ScrollPane>
             <TextField id="choice" fx:id="choice" onAction="#nextButton" prefHeight="25.0" prefWidth="196.0" />
-            <Button id="go" focusTraversable="false" mnemonicParsing="false" onAction="#nextButton" text="Go" />
+            <Button id="go" focusTraversable="false" maxWidth="100.0" mnemonicParsing="false" onAction="#nextButton" prefHeight="17.0" prefWidth="100.0" text="Go" />
          </children>
       </VBox>
     </children>

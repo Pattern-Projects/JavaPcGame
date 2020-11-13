@@ -7,6 +7,7 @@ import java.util.Scanner;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -23,6 +24,9 @@ public class GameController implements Initializable {
 	Enemy A = new Enemy(20, 1000, 70, 34, 2346, this);
 	Friendly B = new Friendly("Lotrak", 3,30,20,0, this);
 	
+    @FXML
+    private ScrollPane resultScroll;
+    
     @FXML
     private TextArea result;
     
